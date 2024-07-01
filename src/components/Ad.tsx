@@ -16,7 +16,7 @@ const Ad = ({ size }:{ size: "sm" | "md" | "lg" }) => {
                 </div>
                 <div className="flex items-center gap-4">
                     <Image src="https://images.pexels.com/photos/2290786/pexels-photo-2290786.jpeg?auto=compress&cs=tinysrgb&w=800" width={24} height={24} alt="" className="rounded-full w-6 h-6 object-cover"/>
-                    <span className="text-[#FEFD03] font-medium">Jeff's Soda</span>
+                    <span className="text-[#FEFD03] font-medium">Jeffs Soda</span>
                 </div>
                 <p className={size === "sm" ? "text-xs" : "text-sm"}>
                     {size == "sm" ? "Lorem ipsum dolor sit maet consectetur adipisicing elit." : size === "md" ? "Lorem ipsum dolor sit maet consectetur adipisicing elit. Lorem ipsum dolor sit maet consectetur adipisicing elit." : "Lorem ipsum dolor sit maet consectetur adipisicing elit. Lorem ipsum dolor sit maet consectetur adipisicing elit. Lorem ipsum dolor sit maet consectetur adipisicing elit."}

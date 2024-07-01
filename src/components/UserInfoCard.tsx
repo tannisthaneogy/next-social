@@ -39,7 +39,7 @@ const UserInfoCard = ({userId}:{userId:string}) => {
                     </div>
                     <div className="flex gap-1 items-center text-xs">
                         <CiCalendarDate/>
-                        <span>Joined Nov'24</span>
+                        <span>Joined Nov&lsquo;24</span>
                     </div>
                 </div>
                 <button className="bg-[#d5d53c] text-[#2a2a30] rounded-md text-sm p-2  font-medium">Follow</button>
