@@ -7,6 +7,7 @@ import { LiaUserFriendsSolid } from "react-icons/lia";
 import { TbCirclePlus2 } from "react-icons/tb";
 import { AiOutlineMessage } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { IoLogInOutline } from "react-icons/io5"
 
 const Navbar = () => {
     return (
@@ -62,8 +63,8 @@ const Navbar = () => {
                         <UserButton/>
                     </SignedIn>
                     <SignedOut>
-                        <div className="flex items-center gap-2 text-sm">
-                            <Image src="/login.png" alt="" width={20} height={20}/>
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                            <IoLogInOutline className="text-lg text-[#FEFD03]"/>
                             <Link href="/sign-in">Login/Register</Link>
                         </div>
                     </SignedOut>
