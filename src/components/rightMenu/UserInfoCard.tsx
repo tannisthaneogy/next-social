@@ -8,6 +8,7 @@ import { IoLocationSharp } from "react-icons/io5"
 import { MdOutlineWork } from "react-icons/md"
 import { RiGraduationCapFill } from "react-icons/ri"
 import UserInfoCardInteraction from "./UserInfoCardInteraction"
+import UpdateUser from "./UpdateUser"
 
 const UserInfoCard = async ({user}:{user:User}) => {
 
@@ -55,7 +56,7 @@ const UserInfoCard = async ({user}:{user:User}) => {
             {/* TOP */}
             <div className="flex justify-between items-center font-medium">
                 <span className="text-gray-400">User Information</span>
-                <Link href="/" className="text-[#FEFD03] text-xs">See all</Link>
+                {currentUserId === user.id ? (<UpdateUser/>) : (<Link href="/" className="text-[#FEFD03] text-xs">See all</Link>)}
             </div>
             {/* BOTTOM */}
             <div className="flex flex-col gap-4 text-gray-400">
@@ -86,7 +87,7 @@ const UserInfoCard = async ({user}:{user:User}) => {
                         <span>Joined {formattedDate}</span>
                     </div>
                 </div>
-                <UserInfoCardInteraction userId={user.id} currentUserId={currentUserId} isUserBlocked={isUserBlocked} isFollowing={isFollowing} isFollowingSent={isFollowingSent}/>
+                {(currentUserId && currentUserId !== user.id) && <UserInfoCardInteraction userId={user.id} isUserBlocked={isUserBlocked} isFollowing={isFollowing} isFollowingSent={isFollowingSent}/>}
             </div>
         </div>
     )
